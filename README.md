@@ -30,7 +30,7 @@ C\#の勉強・練習・確認メモのプロジェクト。
 >
 > <https://visualstudio.microsoft.com/ja/license-terms/mlt031819/>
 
-例えば、3人で始めたWeb系スタートアップ企業を想像すると、最初は条件に引っかからないのでCommunity版を使えるが、事業が軌道に乗り次第「`もしくは 250 人を超えるユーザーがいる`」に接触し、Pro版に切り替えなければいけなくなるだろう（「ユーザー」は従業員や派遣社員・アルバイトのことだと認識している。）
+例えば、3人で始めたスタートアップ企業を想像すると、最初は条件に引っかからないのでCommunity版を使えるが、事業が軌道に乗り次第「`もしくは 250 人を超えるユーザーがいる`」に接触し、Pro版に切り替えなければいけなくなるだろう（「ユーザー」は従業員や派遣社員・アルバイトのことだと認識している。）
 
 ## Setup
 
@@ -123,17 +123,27 @@ Azure FunctionsやGitHub Actionsに気軽に対応するためにそうなった
 
 <https://docs.microsoft.com/ja-jp/dotnet/csharp/fundamentals/program-structure/top-level-statements>
 
+## 開発の流れについて
+
+1. プロジェクトを作成する。
+1. ソースコードを記述する。
+1. プロジェクトをビルドする。
+1. 必要に応じてプロジェクトをデバッグする。
+1. アプリを発行する。
+
 ## デバッグについて
 
-`System.Diagnostics.Debug.Print(Path.GetExtension(imageFileName).ToLower());`でデバッグログを出力できる。
+`System.Diagnostics.Debug.Print();`でデバッグログを出力できる。
 
 ## 発行について
 
 `PublishSingleFile`・`SelfContained`・`RuntimeIdentifier`を指定して`dotnet publish`を実行すると、RuntimeIdentiferで指定したランタイム識別子のフォルダに1つにまとめたexeファイルを出力できる。
 複数のランタイム識別子を指定する場合は`RuntimeIdentifiers`にセミコロンで区切って指定する。
 
-発行の概念
+- 発行の概要
 <https://docs.microsoft.com/ja-jp/dotnet/core/deploying/>
+- ビルドと発行の違い
+<https://www.petitmonte.com/bbs/answers?question_id=27514>
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -178,6 +188,8 @@ xunitのターゲットフレームワークがnet5.0なので、ImageScreener�
 Visual Studioを使わないと実質無理？
 
 <https://docs.microsoft.com/ja-jp/dotnet/core/project-sdk/msbuild-props>
+
+## Tips
 
 ## References
 
