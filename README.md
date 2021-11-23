@@ -191,6 +191,42 @@ Visual Studioを使わないと実質無理？
 
 ## Tips
 
+```shell
+C:\workspace\development\project\ImageScreener\ImageScreener>dotnet add package WindowsAPICodePack-Shell
+  復元対象のプロジェクトを決定しています...
+  Writing C:\Users\Aki\AppData\Local\Temp\tmp4FF0.tmp
+info : パッケージ 'WindowsAPICodePack-Shell' の PackageReference をプロジェクト 'C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj' に追加しています。
+info :   GET https://api.nuget.org/v3/registration5-gz-semver2/windowsapicodepack-shell/index.json
+info :   OK https://api.nuget.org/v3/registration5-gz-semver2/windowsapicodepack-shell/index.json 717 ミリ秒
+info : C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj のパッケージを復元しています...
+info :   GET https://api.nuget.org/v3-flatcontainer/windowsapicodepack-shell/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/windowsapicodepack-shell/index.json 710 ミリ秒
+info :   GET https://api.nuget.org/v3-flatcontainer/windowsapicodepack-shell/1.1.1/windowsapicodepack-shell.1.1.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/windowsapicodepack-shell/1.1.1/windowsapicodepack-shell.1.1.1.nupkg 11 ミリ秒
+info :   GET https://api.nuget.org/v3-flatcontainer/windowsapicodepack-core/index.json
+info :   OK https://api.nuget.org/v3-flatcontainer/windowsapicodepack-core/index.json 711 ミリ秒
+info :   GET https://api.nuget.org/v3-flatcontainer/windowsapicodepack-core/1.1.1/windowsapicodepack-core.1.1.1.nupkg
+info :   OK https://api.nuget.org/v3-flatcontainer/windowsapicodepack-core/1.1.1/windowsapicodepack-core.1.1.1.nupkg 14 ミリ秒
+info : コンテンツ ハッシュ CPFamhL3jPo8O6+ErGsLS4LK3DWP5ncxqhbzpPnYkIW9rjatunUij35iTjprbr9mlYR/5Pbguw21MwSmTOKR4g== の https://api.nuget.org/v3/index.json から WindowsAPICodePack-Shell 1.1.1 がインストールされました。
+info : コンテンツ ハッシュ GoURoQuE7ea7B7q24YRTBfZbsNO7ZtwSyBHbM8zO0ynwfjAGC0bbAmVrDvZ6HbWtqqOt6QTzdmYnj2WJglb5JQ== の https://api.nuget.org/v3/index.json から WindowsAPICodePack-Core 1.1.1 がインストールされました。
+warn : NU1701: パッケージ 'WindowsAPICodePack-Core 1.1.1' はプロジェクトのターゲット フレームワーク 'net5.0-windows7.0' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' を
+使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。
+warn : NU1701: パッケージ 'WindowsAPICodePack-Shell 1.1.1' はプロジェクトのターゲット フレームワーク 'net5.0-windows7.0' ではなく '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8'  
+を使用して復元されました。このパッケージは、使用しているプロジェクトとの完全な互換性がない可能性があります。
+info : パッケージ 'WindowsAPICodePack-Shell' は、プロジェクト 'C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj' のすべて
+の指定されたフレームワークとの互換性があります。
+info : ファイル 'C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj' に追加されたパッケージ 'WindowsAPICodePack-Shell' バー
+ジョン '1.1.1' の PackageReference。
+info : 復元をコミットしています...
+info : アセット ファイルをディスクに書き込んでいます。パス: C:\workspace\development\project\ImageScreener\ImageScreener\obj\project.assets.json
+log  : C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj を復元しました (2.61 sec)。
+
+C:\workspace\development\project\ImageScreener\ImageScreener>dotnet remove  package WindowsAPICodePack-Shell
+info : パッケージ 'WindowsAPICodePack-Shell' の PackageReference をプロジェクト 'C:\workspace\development\project\ImageScreener\ImageScreener\ImageScreener.csproj' から削除しています。
+```
+
+パッケージの実体は`C:\Users\ユーザー名\.nuget\packages`に保存されるので、不要なパッケージは直接削除すればよい（削除コマンドは存在しないっぽい。）
+
 ## References
 
 1. 高江 賢, 基礎からしっかり学ぶC\#の教科書 C\# 7対応, 日経BP社, 2018/01/31 第1版, ASIN:B079LY2P4R/ISBN:978-4-8222-9894-4
