@@ -1,0 +1,65 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build debug",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Debug",
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "build release",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Release",
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "rebuild debug",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Debug",
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "rebuild release",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Release",
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "clean debug",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Debug",
+      ],
+      "problemMatcher": "$msCompile"
+    },
+    {
+      "label": "clean release",
+      "command": "C:\\Windows\\Microsoft.NET\\Framework64\\v4.0.30319\\MSBuild.exe",
+      "type": "process",
+      "args": [
+        "-t:Build",
+        "-p:Configuration=Release",
+      ],
+      "problemMatcher": "$msCompile"
+    }
+  ]
+}

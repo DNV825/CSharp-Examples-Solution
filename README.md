@@ -140,6 +140,14 @@ Azure FunctionsやGitHub Actionsに気軽に対応するためにそうなった
 `PublishSingleFile`・`SelfContained`・`RuntimeIdentifier`を指定して`dotnet publish`を実行すると、RuntimeIdentiferで指定したランタイム識別子のフォルダに1つにまとめたexeファイルを出力できる。
 複数のランタイム識別子を指定する場合は`RuntimeIdentifiers`にセミコロンで区切って指定する。
 
+コンパイル：ソースコードからアセンブリコードを生成する。
+リンク：
+（第1段階）各種リソースファイルをアセンブリコードと結合できる状態にする。⇒objフォルダに生成されるファイル。
+（第2段階）objフォルダに生成されたファイルを組み合わせて動作するプログラムを生成する。⇒binフォルダに生成されるファイル。
+デバッグビルド：デバッグ用の情報を埋め込んでファイルを生成するビルド。
+リリースビルド：デバッグ用の情報を埋め込まずにファイルを生成するビルド。
+発行：インストーラーを作成したい場合や、Webにアップロードしたい場合などの処理をまとめたもの。
+
 - 発行の概要
 <https://docs.microsoft.com/ja-jp/dotnet/core/deploying/>
 - ビルドと発行の違い
@@ -234,3 +242,4 @@ info : パッケージ 'WindowsAPICodePack-Shell' の PackageReference をプロ
 1. @mtm3qi, 「.Net Framework」と「.Net Core」の違い、そして「.Net 5」, Qiita, 2020/01/05, <https://qiita.com/mtm3qi/items/28cd4c2da77008b0892c>
 1. -, ［速報］マイクロソフト「.NET 5」正式リリース。1つのフレームワークでWindows／Mac／Linuxのデスクトップ、サーバアプリ、Webアプリなどが開発可能に, Publickey, 2020/11/11, <https://www.publickey1.jp/blog/20/net_51windowsmaclinuxweb.html>
 1. Andy (Steve) De George / olprod / OpenLocalizationService, .NET アプリケーションの発行の概要, .NET - .NET の基礎, 2021/02/05, <https://docs.microsoft.com/ja-jp/dotnet/core/deploying/>
+1. さるべーじ, 完成後に デバック？ ビルド？, @掲示板, 2008/02/28, <https://www.petitmonte.com/bbs/answers?question_id=27514>
