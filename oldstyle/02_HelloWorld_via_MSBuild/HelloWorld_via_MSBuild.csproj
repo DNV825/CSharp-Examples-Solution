@@ -3,7 +3,7 @@
     <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
     <OutputType>Exe</OutputType>
     <PlatformTarget>x64</PlatformTarget>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AssemblyName>HelloWorld_via_MSBuild</AssemblyName>
     <DebugDirectory>bin\Debug\</DebugDirectory>
     <ReleaseDirectory>bin\Release\</ReleaseDirectory>
