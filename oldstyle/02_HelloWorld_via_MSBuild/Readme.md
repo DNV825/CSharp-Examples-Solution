@@ -27,6 +27,8 @@ C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.303
 ブレークポイントを利用したデバッグを行いたいが、現状できていない。`dotnet build`を実行する際のように、.dllファイルと.exeファイルを分ければ行けるか？
 Microsoft.DiaSymReader.Converterのpdb2pdbでpdbファイルをportable版に置き換えれば動かせそうではあるが…。
 
+しかし、新しいpdbファイルを古いpdbファイルに変換する意味はないし、新しいwinformsで作ったファイルとはソースファイルも全く違うので、この問題はどうしようもなさそう。古いcsc.exeを使わなければいけない環境が悪い。
+
 ## 参考資料
 
 1. ghogen / olprod / OpenLocalizationService / iamqinmu, チュートリアル: MSBuild プロジェクト ファイルのゼロからの作成, Microsoft Docs, 2021/11/19, <https://docs.microsoft.com/ja-jp/visualstudio/msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch?view=vs-2022>
