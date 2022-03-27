@@ -43,3 +43,4 @@ Microsoft.DiaSymReader.Converterのpdb2pdbでpdbファイルをportable版に置
 1. 一色 政彦, 特集 MSBuild完全攻略（前編） .NETビルド・エンジン「MSBuild」使いこなし術, @IT, 2006/04/15, <https://atmarkit.itmedia.co.jp/fdotnet/special/msbuild01/msbuild01_02.html>
 1. 一色 政彦, 特集 MSBuild完全攻略（後編） ビルド・エンジン「MSBuild」を思いのままに操る技, @IT, 2006/05/13, <https://atmarkit.itmedia.co.jp/fdotnet/special/msbuild02/msbuild02_02.html>
 1. tmat / v-zbsail / mmitche / github-john-doe / jonfortescue / terrajobst / cristianosuzuki77 / akoeplinger / jimmymasaru / dotnet-bot / mikem8361 / JohnTortugo / richlander / nguerrera / v-mdriml, Microsoft.DiaSymReader.Converter, dotnet / symreader-converter, 2022/03/21, <https://github.com/dotnet/symreader-converter>
+1. Mark, Legacy PDB Warnings In Unity, Hedberg Games, 2021/04/26, <https://www.hedberggames.com/blog/legacy-pdb-warnings-in-unity>
