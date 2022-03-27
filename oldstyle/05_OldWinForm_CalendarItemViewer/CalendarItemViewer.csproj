@@ -1,0 +1,48 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)'==''">Debug</Configuration>
+    <OutputType>WinExe</OutputType>
+    <PlatformTarget>x64</PlatformTarget>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AssemblyName>CalendarItemViewer</AssemblyName>
+    <DebugDirectory>bin\Debug\</DebugDirectory>
+    <ReleaseDirectory>bin\Release\</ReleaseDirectory>
+  </PropertyGroup>
+  <Choose>
+    <When Condition="'$(Configuration)'=='Debug'">
+      <PropertyGroup>
+        <OutputPath>$(DebugDirectory)$(PlatformTarget)\$(TargetFrameworkVersion)\</OutputPath>
+        <DebugSymbols>True</DebugSymbols>
+        <DebugType>full</DebugType>
+      </PropertyGroup>
+    </When>
+    <When Condition="'$(Configuration)'=='Release'">
+      <PropertyGroup>
+        <OutputPath>$(ReleaseDirectory)$(PlatformTarget)\$(TargetFrameworkVersion)\</OutputPath>
+      </PropertyGroup>
+    </When>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="CalendarItemViewer.cs" />
+  </ItemGroup>
+  <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">
+    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+    <Csc Sources="@(Compile)"
+      TargetType="$(OutputType)"
+      DebugType="$(DebugType)"
+      DefineConstants="DEBUG_CONFIG"
+      OutputAssembly="$(OutputPath)$(AssemblyName).exe"
+      ToolPath="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\"
+      Condition="'$(Configuration)'=='Debug'" />
+    <Csc Sources="@(Compile)"
+      TargetType="$(OutputType)"
+      OutputAssembly="$(OutputPath)$(AssemblyName).exe"
+      ToolPath="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\"
+      Condition="'$(Configuration)'=='Release'" />
+  </Target>
+  <Target Name="Clean">
+    <RemoveDir Directories="$(DebugDirectory)" Condition="'$(Configuration)'=='Debug'" />
+    <RemoveDir Directories="$(ReleaseDirectory)" Condition="'$(Configuration)'=='Release'" />
+  </Target>
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+</Project>
