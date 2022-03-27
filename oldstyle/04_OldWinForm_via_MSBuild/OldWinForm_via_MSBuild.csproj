@@ -27,8 +27,18 @@
   </ItemGroup>
   <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
-    <Csc Sources="@(Compile)" TargetType="$(OutputType)" DebugType="$(DebugType)" DefineConstants="DEBUG_CONFIG" OutputAssembly="$(OutputPath)$(AssemblyName).exe" Condition="'$(Configuration)'=='Debug'" />
-    <Csc Sources="@(Compile)" TargetType="$(OutputType)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" Condition="'$(Configuration)'=='Release'" />
+    <Csc Sources="@(Compile)"
+      TargetType="$(OutputType)"
+      DebugType="$(DebugType)"
+      DefineConstants="DEBUG_CONFIG"
+      OutputAssembly="$(OutputPath)$(AssemblyName).exe"
+      ToolPath="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\"
+      Condition="'$(Configuration)'=='Debug'" />
+    <Csc Sources="@(Compile)"
+      TargetType="$(OutputType)"
+      OutputAssembly="$(OutputPath)$(AssemblyName).exe"
+      ToolPath="C:\Windows\Microsoft.NET\Framework64\v4.0.30319\"
+      Condition="'$(Configuration)'=='Release'" />
   </Target>
   <Target Name="Clean">
     <RemoveDir Directories="$(DebugDirectory)" Condition="'$(Configuration)'=='Debug'" />
