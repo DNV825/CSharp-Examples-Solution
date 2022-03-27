@@ -9,9 +9,9 @@
       "type": "clr",
       "request": "launch",
       "preLaunchTask": "build debug",
-      "program": "${workspaceFolder}/bin/Debug/x64/HelloWorld_via_MSBuild.exe",
+      "program": "${workspaceFolder}/bin/Debug/x64/v4.0/HelloWorld_via_MSBuild.exe",
       "args": [],
-      "cwd": "${workspaceFolder}/bin/Debug/x64",
+      "cwd": "${workspaceFolder}/bin/Debug/x64/v4.0",
       "console": "integratedTerminal",
       "stopAtEntry": false
     }

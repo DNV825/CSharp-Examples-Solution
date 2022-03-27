@@ -5,14 +5,16 @@
     <PlatformTarget>x64</PlatformTarget>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AssemblyName>HelloWorld_via_MSBuild</AssemblyName>
+    <DebugSymbols Condition="'$(Configuration)'=='Debug'">True</DebugSymbols>
+    <DebugType Condition="'$(Configuration)'=='Debug'">full</DebugType>
     <DebugDirectory>bin\Debug\</DebugDirectory>
     <ReleaseDirectory>bin\Release\</ReleaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Debug'">
-    <OutputPath>$(DebugDirectory)$(PlatformTarget)\</OutputPath>
+    <OutputPath>$(DebugDirectory)$(PlatformTarget)\$(TargetFrameworkVersion)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
-    <OutputPath>$(ReleaseDirectory)$(PlatformTarget)\</OutputPath>
+    <OutputPath>$(ReleaseDirectory)$(PlatformTarget)\$(TargetFrameworkVersion)\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="HelloWorld_via_MSBuild.cs" />
@@ -20,12 +22,12 @@
   </ItemGroup>
   <Target Name="Build" Inputs="@(Compile)" Outputs="$(OutputPath)$(AssemblyName).exe">
     <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
-    <Csc Sources="@(Compile)" DebugType="full" DefineConstants="DEBUG_CONFIG" OutputAssembly="$(OutputPath)$(AssemblyName).exe"  Condition="'$(Configuration)'=='Debug'" />
+    <Csc Sources="@(Compile)" DebugType="$(DebugType)" DefineConstants="DEBUG_CONFIG" OutputAssembly="$(OutputPath)$(AssemblyName).exe"  Condition="'$(Configuration)'=='Debug'" />
     <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe"  Condition="'$(Configuration)'=='Release'" />
   </Target>
   <Target Name="Clean">
-    <RemoveDir Directories="$(OutputPath)" Condition="'$(Configuration)'=='Debug'" />
-    <RemoveDir Directories="$(OutputPath)" Condition="'$(Configuration)'=='Release'" />
+    <RemoveDir Directories="$(DebugDirectory)" Condition="'$(Configuration)'=='Debug'" />
+    <RemoveDir Directories="$(ReleaseDirectory)" Condition="'$(Configuration)'=='Release'" />
   </Target>
   <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
 </Project>
