@@ -9,17 +9,17 @@
 以下のように利用する。なお、`-p:Configuration=Debug`は省略可能。具体的な指定方法は.csprojファイルを参照。
 
 ```shell
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Build -p:Configuration=Debug
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Build
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Build -p:Configuration=Release
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Build -p:Configuration=Debug
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Build
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Build -p:Configuration=Release
 C:\プロジェクトフォルダ> 
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Clean -p:Configuration=Debug
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Clean
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:Clean -p:Configuration=Release
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Clean -p:Configuration=Debug
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Clean
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:Clean -p:Configuration=Release
 C:\プロジェクトフォルダ> 
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:ReBuild -p:Configuration=Debug
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:ReBuild
-C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild ターゲット.csproj -t:ReBuild -p:Configuration=Release
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:ReBuild -p:Configuration=Debug
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:ReBuild
+C:\プロジェクトフォルダ> C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild -t:ReBuild -p:Configuration=Release
 ```
 
 ## 問題
